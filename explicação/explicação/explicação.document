@@ -1,0 +1,30 @@
+document.getElementById('cadastroForm'):  Busca o elemento do DOM com o ID cadastroForm, que é o formulário que o usuário preenche.
+
+
+.addEventListener('submit', function(event)) {...}:  Colocando um ouvinte de evento ao formulário. escuta o evento de submit, que é acionado quando o formulário é
+ enviado. Quando isso ocorre, a função que está sendo definida é executada.
+
+ event.preventDefault();: Impede o comportamento padrão do formulário de recarregar a página ao ser enviado.
+
+ const nome = document.getElementById('nome').value;: Pega o valor do campo de entrada com o ID nome. O .value dá o texto 
+ que o usuário digitou. Este valor é armazenado na variável nome.
+
+{const nome = document.getElementById('nome').value;
+const email = document.getElementById('email').value;} =As variáveis nome e email são atribuídas aos valores dos 
+campos de entrada do formulário, obtidos pelos seus IDs (nome e email).
+
+const tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];= Obtém o elemento da tabela com o ID tabela e, em seguida, seleciona o primeiro elemento <tbody> dentro dela.
+
+const novaLinha = tabela.insertRow();=Cria uma nova linha (<tr>) no corpo da tabela.
+
+{const celulaNome = novaLinha.insertCell(0);
+const celulaEmail = novaLinha.insertCell(1);}=Insere duas novas células (<td>) na nova linha, uma para o nome e outra para o email.
+
+{celulaNome.textContent = nome;
+celulaEmail.textContent = email;}=Atribui o valor das variáveis nome e email ao texto das respectivas células.
+
+document.getElementById('cadastroForm').reset();=limpa todos os campos do formulário, reiniciando os valores de entrada para os padrões.
+
+
+
+
